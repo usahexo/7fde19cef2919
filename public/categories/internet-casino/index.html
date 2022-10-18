@@ -84,7 +84,7 @@
 				  	
 				    <li><a href="/categories/7bit-Casino/" class="animsition-link">7bit Casino<small>(4)</small></a></li>
 				    
-				    <li><a href="/categories/Internet-Casino/" class="animsition-link">Internet Casino<small>(1)</small></a></li>
+				    <li><a href="/categories/Internet-Casino/" class="animsition-link">Internet Casino<small>(2)</small></a></li>
 				    
 				    <li><a href="/categories/Live-Casino/" class="animsition-link">Live Casino<small>(2)</small></a></li>
 				    
@@ -300,7 +300,24 @@ $('#intro').find('img').each(function(){
       
 </body>
 </html>
-');
+izeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
 });
 (function($){
   $('.fancybox').fancybox();
